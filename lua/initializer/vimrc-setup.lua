@@ -35,7 +35,6 @@ vim.opt.showmatch = true        -- 괄호 강조
 -- Neovim 전용 설정
 vim.opt.inccommand = "nosplit"  -- 실시간 명령 미리보기
 vim.opt.lazyredraw = true       -- 스크립트 실행 중 redraw 하지 않음
-vim.opt.cmdheight = 0           -- 명령줄 높이 조절
 -- vim.opt.updatetime = 300      -- 화면 갱신 주기
 vim.opt.signcolumn = "yes"      -- 사인 컬럼 항상 표시
 -- vim.opt.pumheight = 10       -- 팝업 메뉴 최대 높이 설정
