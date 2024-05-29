@@ -5,11 +5,12 @@ return {
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
-
+    keys = {
+      { "<leader>t", "<cmd>NvimTreeToggle<CR>", desc = "NvimTreeToggle", mode = "n", noremap = true, silent = true },
+      { "<leader>f", "<cmd>NvimTreeFocus<CR>", desc = "NvimTreeFocus", mode = "n", noremap = true, silent = true },
+      --vim.api.nvim_set_keymap("n", "<leader>c", ":NvimTreeFindFile<cr>", { silent = true, noremap = true })
+    },
     config = function()
-        vim.api.nvim_set_keymap("n", "<leader>t", ":NvimTreeToggle<cr>", { silent = true, noremap = true })
-        vim.api.nvim_set_keymap("n", "<leader>f", ":NvimTreeFocus<cr>", { silent = true, noremap = true })
-        --vim.api.nvim_set_keymap("n", "<leader>c", ":NvimTreeFindFile<cr>", { silent = true, noremap = true })
     --
         require("nvim-tree").setup({
             disable_netrw = true,

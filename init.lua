@@ -1,4 +1,6 @@
 require("initializer.vimrc-setup")
+require("initializer.vim-keymap-setup")
+require("initializer.vim-autocmd-setup")
 require("initializer.lazy-nvim-setup")
 
 require("lazy").setup({
@@ -19,6 +21,7 @@ require("lazy").setup({
   require("plugins.lualine-setting"),
   require("plugins.todo-comments-setting"),
   require("plugins.trouble-nvim-setting"),
+  require("plugins.vim-sleuth-setting"),
 
   require("themes.onedark-setting"),
 })

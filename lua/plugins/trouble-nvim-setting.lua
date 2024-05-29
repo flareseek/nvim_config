@@ -1,9 +1,6 @@
 return {
   "folke/trouble.nvim",
   branch = "dev", -- IMPORTANT!
-  action_keys = {
-    close = "<leader>q",
-  },
   keys = {
     {
       "<leader>xx",

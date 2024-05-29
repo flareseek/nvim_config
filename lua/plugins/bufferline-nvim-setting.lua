@@ -4,12 +4,13 @@ return {
     dependencies = {
         'nvim-tree/nvim-web-devicons'
     },
+    keys = {
+      { "<leader>q", "<cmd>BufferLineCyclePrev<CR>", desc = "BufferPrev", mode = "n", noremap = true, silent = true },
+      { "<leader>w", "<cmd>BufferLineCycleNext<CR>", desc = "BufferNext", mode = "n", noremap = true, silent = true },
+      { "<leader><leader>t", "<cmd>BufferLinePick<CR>", desc = "BufferPick", mode = "n", noremap = true, silent = true },
+    },
     event = 'VeryLazy',
     config = function()
-        vim.api.nvim_set_keymap('n', '<leader>q', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })
-        vim.api.nvim_set_keymap('n', '<leader>w', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
-        vim.api.nvim_set_keymap('n', '<leader><leader>t', ':BufferLinePick', { noremap = true, silent = true })
-        vim.api.nvim_set_keymap("n", "<leader>c", ":bdelete<cr>", { silent = true, noremap = true })
             local bufferline = require("bufferline")
 
         bufferline.setup({
