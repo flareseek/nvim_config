@@ -7,4 +7,8 @@ require("initializer.lazy-nvim-setup")
 require("lazy").setup({
   { import = "themes" },
   { import = "plugins" },
+}, {
+  change_detection = {
+    enabled = false
+  }
 })
