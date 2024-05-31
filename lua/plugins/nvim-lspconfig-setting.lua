@@ -19,5 +19,6 @@ return {
           }
         })
         require("lspconfig").tsserver.setup({})
+        require("lspconfig").pyright.setup({})
     end
 }

@@ -3,7 +3,7 @@ return {
   build = ":TSUpdate",
 
   opts = {
-    ensure_installed = { "c", "cpp", "vim", "lua",
+    ensure_installed = { "c", "cpp", "vim", "lua", "python",
       "javascript", "jsdoc", "json", "typescript" 
     },
     auto_install = true,

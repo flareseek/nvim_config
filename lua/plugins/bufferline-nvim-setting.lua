@@ -8,6 +8,7 @@ return {
       { "<leader>q", "<cmd>BufferLineCyclePrev<CR>", desc = "BufferPrev", mode = "n", noremap = true, silent = true },
       { "<leader>w", "<cmd>BufferLineCycleNext<CR>", desc = "BufferNext", mode = "n", noremap = true, silent = true },
       { "<leader><leader>t", "<cmd>BufferLinePick<CR>", desc = "BufferPick", mode = "n", noremap = true, silent = true },
+      { "<leader><leader>c", "<cmd>bd<CR>", desc = "Current Buffer Close", mode = "n", noremap = true, silent = true },
     },
     event = 'VeryLazy',
     config = function()
