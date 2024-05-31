@@ -6,11 +6,10 @@ return {
 
   config = function()
     require('onedark').setup({
-      style = 'warm',
-      transparent = false,
+      style = 'warmer',
+      transparent = true,
       term_colors = true,
 
-      toggle_style_key = '<leader><leader>r',
       toggle_style_list = { 'darker', 'deep', 'warm', 'warmer', 'light' },
 
       code_style = {

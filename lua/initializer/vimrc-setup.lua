@@ -9,7 +9,6 @@ vim.opt.incsearch = true        -- 실시간 검색
 vim.opt.ignorecase = true       -- 대소문자 구분 없는 검색
 -- vim.opt.smartcase = true     -- 대소문자 구분 검색
 vim.opt.cursorline = true    -- 현재 줄 강조
-vim.opt.background = "dark"     -- 어두운 배경 테마
 vim.opt.ruler = false            -- 커서 위치 표시
 
 vim.opt.showcmd = true          -- 입력 중인 명령 표시
@@ -51,8 +50,6 @@ vim.opt.scrolloff = 7
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.g.mapleader = "," -- Make sure to set `mapleader` before lazy so your mappings are correct
-vim.g.maplocalleader = "\\" -- Same for `maplocalleader`
 -- 파일 타입 플러그인 및 들여쓰기 설정
 vim.cmd("filetype plugin indent on")
 
