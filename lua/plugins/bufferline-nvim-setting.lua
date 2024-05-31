@@ -11,23 +11,24 @@ return {
     },
     event = 'VeryLazy',
     config = function()
-            local bufferline = require("bufferline")
-
+        local bufferline = require("bufferline")
         bufferline.setup({
             options = {
                 mode = "buffers",
-                numbers = "ordinal",
+                numbers = "none",
+                max_name_length = 17,
+                tab_size = 15,
                 indicator = {
                     icon = '▎',
-                    style = 'underline'
+                    style = 'icon'
                 },
                 diagnostics = "nvim_lsp",
                 diagnostics_indicator = function(count, level, diagnostics_dict, context)
                     local s = " "
                     for e, n in pairs(diagnostics_dict) do
-                    local sym = e == "error" and " "
+                        local sym = e == "error" and " "
                         or (e == "warning" and " " or "" )
-                    s = s .. n .. sym
+                        s = s .. n .. sym
                     end
                     return s
                 end,
@@ -40,8 +41,29 @@ return {
                         separator = true,
                     }
                 },
-                
+                groups = {
+                    options = {
+                        toggle_hidden_on_enter = false,
+                    },
+                    items = {
+                        {
+                            name = "H",
+                            highlight = { underline = true, sp = "#FF55FF"},
+                            matcher = function(buf) -- Mandatory
+                                return buf.name:match("%.h") or buf.name:match("%.hpp")
+                            end,
+                        },
+                        {
+                            name = "S",
+                            highlight = { underline = true, sp = "#5555FF"},
+                            matcher = function(buf)
+                                return buf.name:match("%.cpp") or buf.name:match("%.c")
+                            end
 
+                        },
+                        require("bufferline.groups").builtin.ungrouped,
+                    }
+                },
             }
         })
     end

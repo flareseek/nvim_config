@@ -3,7 +3,7 @@ return {
     dependencies = { 
         'nvim-lua/plenary.nvim' 
     },
-
+    opts = {},
     config = function()
         local builtin = require("telescope.builtin")
         vim.keymap.set("n", "<leader>e", builtin.find_files, { desc = "Find Files"})
