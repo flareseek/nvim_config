@@ -1,6 +1,7 @@
 return {
   "folke/trouble.nvim",
-  branch = "dev", -- IMPORTANT!
+  opts = {}, -- for default options, refer to the configuration section for custom setup.
+  cmd = "Trouble",
   keys = {
     {
       "<leader>xx",
@@ -33,5 +34,5 @@ return {
       desc = "Quickfix List (Trouble)",
     },
   },
-  opts = {}, -- for default options, refer to the configuration section for custom setup.
 }
+
