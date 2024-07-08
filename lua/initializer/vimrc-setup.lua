@@ -3,7 +3,7 @@
 vim.g.have_nerd_font = true   -- nerd_font 설정
 vim.opt.mouse = "a"             -- 마우스 모드 활성화
 vim.opt.number = true           -- 라인 번호 출력
-vim.opt.relativenumber = true   -- releative line numbers
+-- vim.opt.relativenumber = true   -- releative line numbers
 vim.opt.expandtab = false        -- 탭을 공백으로 변환
 vim.opt.incsearch = true        -- 실시간 검색
 vim.opt.ignorecase = true       -- 대소문자 구분 없는 검색
