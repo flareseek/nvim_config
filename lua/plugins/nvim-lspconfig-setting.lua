@@ -12,13 +12,10 @@ return {
     },
     config = function()
         require("lspconfig").clangd.setup({
-          settings = {
-            clangd = {
-              fallbackFlags = { "-std=c++14" },
-            }
-          }
+            cmd = { "clangd", "--background-index" },
+            filetypes = { "c", "cpp" },
         })
-        require("lspconfig").tsserver.setup({})
+        require("lspconfig").ts_ls.setup({})
         require("lspconfig").pyright.setup({})
     end
 }

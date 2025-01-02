@@ -56,7 +56,7 @@ vim.cmd("filetype plugin indent on")
 
 vim.opt.tabstop = 2             -- 탭 간격
 vim.opt.expandtab = true           -- tab -> space
- vim.opt.shiftwidth = 2          -- 들여쓰기 간격
+vim.opt.shiftwidth = 2          -- 들여쓰기 간격
 -- vim.opt.softtabstop = 2         -- 백스페이스 시 적용되는 공백
 -- vim.opt.pumheight = 10       -- 팝업 메뉴 최대 높이 설정
 
